@@ -1,0 +1,3 @@
+enum Style {
+  Style1,
+}
