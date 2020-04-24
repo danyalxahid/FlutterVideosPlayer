@@ -38,8 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
             id: "1",
             name: "Bee video",
             videoUrl:
-                "https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4",
-            videoControl: new NetworkVideoControl(autoPlay: true)),
+                "https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4"),
         new NetworkVideo(
             id: "2",
             name: "Elephant Dream",
@@ -56,7 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
             videoUrl:
                 "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
             thumbnailUrl:
-                "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"),
+                "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
+            videoControl: new NetworkVideoControl(autoPlay: true)),
         new NetworkVideo(
             id: "4",
             name: "For Bigger Blazes",
