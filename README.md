@@ -28,37 +28,37 @@ import 'package:videos_player/videos_player.dart';
 import 'package:videos_player/model/control.model.dart';
 
 final widget = VideosPlayer(networkVideos: [
-                       new Video(
+                       new NetworkVideo(
                            id: "1",
                            name: "Bee video",
                            videoUrl:
-                               "https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4",
-                           videoControl: new Control(autoPlay: true)),
-                       new Video(
+                               "https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4"),
+                       new NetworkVideo(
                            id: "2",
                            name: "Elephant Dream",
                            videoUrl:
                                "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
                            thumbnailUrl:
                                "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
-                           videoControl: new Control(
+                           videoControl: new NetworkVideoControl(
                              fullScreenByDefault: true,
                            )),
-                       new Video(
+                       new NetworkVideo(
                            id: "3",
                            name: "Big Buck Bunny",
                            videoUrl:
                                "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
                            thumbnailUrl:
-                               "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"),
-                       new Video(
+                               "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
+                           videoControl: new NetworkVideoControl(autoPlay: true)),
+                       new NetworkVideo(
                            id: "4",
                            name: "For Bigger Blazes",
                            videoUrl:
                                "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
                            thumbnailUrl:
                                "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg"),
-                       new Video(
+                       new NetworkVideo(
                            id: "5",
                            name: "For Bigger Escape",
                            videoUrl:
@@ -70,7 +70,7 @@ final widget = VideosPlayer(networkVideos: [
 ```
 ## Video Controls
 
-Each video controls support is added according to the chewie player controller
+Video controls support is added according to each video.
 
 ## Example
 
