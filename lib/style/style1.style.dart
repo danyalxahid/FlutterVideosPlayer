@@ -5,8 +5,8 @@ import 'package:videos_player/util/constant/style1.constants.dart';
 
 class Style1 extends StatefulWidget {
   final double maxHeight;
-  final List<VideoModel> networkVideos;
-  final VideoModel selectedVideo;
+  final List<NetworkVideo> networkVideos;
+  final NetworkVideo selectedVideo;
   final Function onVideoChange;
 
   Style1(
@@ -108,7 +108,8 @@ class _Style1State extends State<Style1> {
                               )), // button text
                             ),
                             onTap: () {
-                              widget.onVideoChange(widget.networkVideos[index]);
+                              widget.onVideoChange(
+                                  widget.networkVideos[index], false);
                             });
                       },
                     ),

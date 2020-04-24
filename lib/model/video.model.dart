@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:videos_player/model/control.model.dart';
 
-class VideoModel {
+class NetworkVideo {
   final String id;
   final String name;
   final String videoUrl;
   final String thumbnailUrl;
+  final NetworkVideoControl videoControl;
 
-  VideoModel(
+  NetworkVideo(
       {@required this.id,
       @required this.name,
       @required this.videoUrl,
-      this.thumbnailUrl});
+      this.thumbnailUrl,
+      this.videoControl});
 }
