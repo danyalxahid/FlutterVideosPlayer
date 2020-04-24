@@ -9,7 +9,7 @@ Videos Player handles both configurations in a single package.
 
 ## Demo
 
-![Demo](https://github.com/danyalxahid/FlutterVideosPlayer/raw/master/assets/videos_player_demo.gif)
+![Demo](https://github.com/danyalxahid/FlutterVideosPlayer/blob/master/asset/videos_player_demo.gif?raw=true)
 
 ## Installation
 
