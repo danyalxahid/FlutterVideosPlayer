@@ -1,3 +1,7 @@
+## [0.1.2]
+
+* Download size decreased
+
 ## [0.1.1]
 
 * Simple bugfix

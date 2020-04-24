@@ -1,6 +1,6 @@
 name: videos_player
 description: A flutter package to display list of video with help of chewie and video player
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/danyalxahid/FlutterVideosPlayer
 repository: https://github.com/danyalxahid/FlutterVideosPlayer
 
