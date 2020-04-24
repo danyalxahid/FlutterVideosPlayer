@@ -1,8 +1,12 @@
+## [0.1.1]
+
+* Simple bugfix
+
 ## [0.1.0]
 
 * Read me updated, example added, with/without videos control support
-## [0.0.3]
 
+## [0.0.3]
 
 * Read me updated, example added, with/without thumbnail support
 
