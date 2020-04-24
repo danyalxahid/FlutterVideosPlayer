@@ -89,6 +89,6 @@ class NetworkVideoControl {
       DeviceOrientation.landscapeLeft,
       DeviceOrientation.landscapeRight,
     ],
-    this.routePageBuilder = null,
+    this.routePageBuilder,
   });
 }
