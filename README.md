@@ -25,6 +25,7 @@ dependencies:
 ```dart
 import 'package:videos_player/model/video.model.dart';
 import 'package:videos_player/videos_player.dart';
+import 'package:videos_player/model/control.model.dart';
 
 final widget = VideosPlayer(networkVideos: [
                        new Video(
