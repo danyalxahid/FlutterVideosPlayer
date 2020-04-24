@@ -22,6 +22,14 @@ class Style1 extends StatefulWidget {
 class _Style1State extends State<Style1> {
   double _animatedWidth = 0.0;
 
+  openCloseVideosModal() async {
+    setState(() {
+      _animatedWidth != 0.0
+          ? _animatedWidth = 0.0
+          : _animatedWidth = kVideosWidth;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return (widget.networkVideos.length > 1)
@@ -48,11 +56,7 @@ class _Style1State extends State<Style1> {
                         color: kBackgroundColor,
                       ),
                     ),
-                    onTap: () => setState(() {
-                      _animatedWidth != 0.0
-                          ? _animatedWidth = 0.0
-                          : _animatedWidth = kVideosWidth;
-                    }),
+                    onTap: openCloseVideosModal,
                   ),
                   new AnimatedContainer(
                     color: kBackgroundColor,
@@ -110,6 +114,7 @@ class _Style1State extends State<Style1> {
                             onTap: () {
                               widget.onVideoChange(
                                   widget.networkVideos[index], false);
+                              openCloseVideosModal();
                             });
                       },
                     ),

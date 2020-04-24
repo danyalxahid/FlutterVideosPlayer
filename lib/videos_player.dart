@@ -151,7 +151,7 @@ class _VideosPlayerState extends State<VideosPlayer> {
                 controller: _chewieController,
               ),
               (widget.playlistStyle == Style.Style1)
-                  ? Style1(
+                  ? new Style1(
                       maxHeight: _maxHeight,
                       networkVideos: widget.networkVideos,
                       selectedVideo: selectedVideo,
