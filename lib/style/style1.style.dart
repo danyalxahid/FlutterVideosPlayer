@@ -103,7 +103,8 @@ class _Style1State extends State<Style1> {
                                     : widget.networkVideos[index].name,
                                 style: TextStyle(
                                     color: kTextColor,
-                                    decorationColor: kBackgroundColor),
+                                    backgroundColor: kBackgroundColor,
+                                    wordSpacing: 2),
                               )), // button text
                             ),
                             onTap: () {
