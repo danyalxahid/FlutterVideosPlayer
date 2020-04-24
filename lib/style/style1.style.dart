@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:videos_player/model/video.model.dart';
+import 'package:videos_player/util/constant/constants.dart';
+import 'package:videos_player/util/constant/style1.constants.dart';
 
 class Style1 extends StatefulWidget {
   final double maxHeight;
@@ -22,87 +24,99 @@ class _Style1State extends State<Style1> {
 
   @override
   Widget build(BuildContext context) {
-    return new Positioned(
-      right: 0.0,
-      bottom: 0.0,
-      child: Container(
-        height: widget.maxHeight,
-        child: Row(
-          children: <Widget>[
-            InkWell(
-              child: Container(
-                height: 40,
-                width: 15,
-                child: Icon(
-                  Icons.chevron_left,
-                  size: 20,
-                  color: Colors.white,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(10),
-                      topLeft: Radius.circular(10)),
-                  color: Colors.black26,
-                ),
-              ),
-              onTap: () => setState(() {
-                _animatedWidth != 0.0
-                    ? _animatedWidth = 0.0
-                    : _animatedWidth = 150.0;
-              }),
-            ),
-            new AnimatedContainer(
-              color: Colors.black26,
-              duration: const Duration(milliseconds: 500),
-              child: ListView.builder(
-                itemCount: widget.networkVideos.length,
-                itemBuilder: (context, index) {
-                  return GestureDetector(
-                      child: Stack(
-                        children: <Widget>[
-                          Container(
-                            width: 150,
-                            height: 60,
-                            margin: EdgeInsets.only(bottom: 5),
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Colors.white,
-                                width: (widget.networkVideos[index].id ==
-                                        widget.selectedVideo.id)
-                                    ? 2
-                                    : 0,
-                              ),
-                              image: DecorationImage(
-                                  image: NetworkImage(
-                                      widget.networkVideos[index].thumbnailUrl),
-                                  fit: BoxFit.fitWidth),
-                            ), // button text
-                          ),
-                          new Positioned(
-                              left: 3.0,
-                              bottom: 8.0,
-                              child: Text(
-                                widget.networkVideos[index].name.length > 12
+    return (widget.networkVideos.length > 1)
+        ? Positioned(
+            right: 0.0,
+            bottom: 0.0,
+            child: Container(
+              height: widget.maxHeight,
+              child: Row(
+                children: <Widget>[
+                  InkWell(
+                    child: Container(
+                      height: 60,
+                      width: 25,
+                      child: Icon(
+                        Icons.chevron_left,
+                        size: 30,
+                        color: Colors.white,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(10),
+                            topLeft: Radius.circular(10)),
+                        color: kBackgroundColor,
+                      ),
+                    ),
+                    onTap: () => setState(() {
+                      _animatedWidth != 0.0
+                          ? _animatedWidth = 0.0
+                          : _animatedWidth = kVideosWidth;
+                    }),
+                  ),
+                  new AnimatedContainer(
+                    color: kBackgroundColor,
+                    duration: const Duration(milliseconds: 500),
+                    child: ListView.builder(
+                      itemCount: widget.networkVideos.length,
+                      itemBuilder: (context, index) {
+                        return GestureDetector(
+                            child: Container(
+                              width: kVideosWidth,
+                              height: kVideosHeight,
+                              margin: EdgeInsets.only(bottom: 5),
+                              decoration: (widget
+                                          .networkVideos[index].thumbnailUrl !=
+                                      null)
+                                  ? BoxDecoration(
+                                      border: Border.all(
+                                        color: kImageBorderColor,
+                                        width:
+                                            (widget.networkVideos[index].id ==
+                                                    widget.selectedVideo.id)
+                                                ? 2
+                                                : 0,
+                                      ),
+                                      image: DecorationImage(
+                                          image: NetworkImage(widget
+                                              .networkVideos[index]
+                                              .thumbnailUrl),
+                                          fit: BoxFit.fitWidth),
+                                    )
+                                  : BoxDecoration(
+                                      border: Border.all(
+                                        color: kImageBorderColor,
+                                        width:
+                                            (widget.networkVideos[index].id ==
+                                                    widget.selectedVideo.id)
+                                                ? 2
+                                                : 0,
+                                      ),
+                                    ), //
+                              child: Center(
+                                  child: Text(
+                                widget.networkVideos[index].name.length >
+                                        kMaxTextLength
                                     ? widget.networkVideos[index].name
-                                            .substring(0, 12) +
+                                            .substring(0, kMaxTextLength) +
                                         "..."
                                     : widget.networkVideos[index].name,
                                 style: TextStyle(
-                                    color: Colors.white,
-                                    backgroundColor: Colors.black26),
-                              ))
-                        ],
-                      ),
-                      onTap: () {
-                        widget.onVideoChange(widget.networkVideos[index]);
-                      });
-                },
+                                    color: kTextColor,
+                                    decorationColor: kBackgroundColor),
+                              )), // button text
+                            ),
+                            onTap: () {
+                              widget.onVideoChange(widget.networkVideos[index]);
+                            });
+                      },
+                    ),
+                    width: _animatedWidth,
+                  )
+                ],
               ),
-              width: _animatedWidth,
-            )
-          ],
-        ),
-      ),
-    );
+            ),
+          )
+        : Container();
   }
 }
