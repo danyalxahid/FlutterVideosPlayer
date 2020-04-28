@@ -1,3 +1,7 @@
+## [0.1.3]
+
+* Another Styling option added
+
 ## [0.1.2]
 
 * Download size decreased
