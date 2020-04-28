@@ -11,11 +11,11 @@ Videos Player handles both configurations in a single package.
 
 ### Style 1
 
-![Demo](https://github.com/danyalxahid/FlutterVideosPlayer/blob/master/asset/videos_player_demo_style1.gif?raw=true)
+![Demo](https://raw.githubusercontent.com/danyalxahid/FlutterVideosPlayer/master/asset/video_player_demo_style1.gif)
 
 ### Style 2
 
-![Demo](https://github.com/danyalxahid/FlutterVideosPlayer/blob/master/asset/videos_player_demo_style2.gif?raw=true)
+![Demo](https://raw.githubusercontent.com/danyalxahid/FlutterVideosPlayer/master/asset/video_player_demo_style2.gif)
 
 ## Installation
 
