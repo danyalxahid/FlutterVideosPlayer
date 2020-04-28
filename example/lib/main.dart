@@ -37,17 +37,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: VideosPlayer(
         networkVideos: [
           new NetworkVideo(
-              id: "1",
-              name: "Bee video",
-              videoUrl:
-                  "https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4"),
-          new NetworkVideo(
               id: "2",
               name: "Elephant Dream",
               videoUrl:
                   "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
               thumbnailUrl:
-                  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
+                  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
               videoControl: new NetworkVideoControl(
                 fullScreenByDefault: true,
               )),
@@ -57,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
               videoUrl:
                   "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
               thumbnailUrl:
-                  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
+                  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
               videoControl: new NetworkVideoControl(autoPlay: true)),
           new NetworkVideo(
               id: "4",
@@ -65,14 +60,28 @@ class _MyHomePageState extends State<MyHomePage> {
               videoUrl:
                   "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
               thumbnailUrl:
-                  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg"),
+                  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg"),
           new NetworkVideo(
               id: "5",
               name: "For Bigger Escape",
               videoUrl:
                   "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
               thumbnailUrl:
-                  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg"),
+                  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg"),
+          new NetworkVideo(
+              id: "6",
+              name: "For Bigger Fun",
+              videoUrl:
+                  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+              thumbnailUrl:
+                  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerFun.jpg"),
+          new NetworkVideo(
+              id: "7",
+              name: "For Bigger Joyrides",
+              videoUrl:
+                  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+              thumbnailUrl:
+                  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerJoyrides.jpg"),
         ],
         playlistStyle: Style.Style2,
       ),
