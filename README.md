@@ -8,14 +8,9 @@ The [`chewie`](https://pub.dev/packages/chewie#-readme-tab-) plugin uses the `vi
 Videos Player handles both configurations in a single package.
 
 ## Demo
-
-### Style 1
-
-![Demo](https://raw.githubusercontent.com/danyalxahid/FlutterVideosPlayer/master/asset/video_player_demo_style1.gif)
-
-### Style 2
-
-![Demo](https://raw.githubusercontent.com/danyalxahid/FlutterVideosPlayer/master/asset/video_player_demo_style2.gif)
+| ![Demo](https://raw.githubusercontent.com/danyalxahid/FlutterVideosPlayer/master/asset/video_player_demo_style1.gif) | ![Demo](https://raw.githubusercontent.com/danyalxahid/FlutterVideosPlayer/master/asset/video_player_demo_style2.gif)|
+|:---:|:---:|
+| Style 1 | Style 2 |
 
 ## Installation
 
