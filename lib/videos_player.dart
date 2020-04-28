@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:video_player/video_player.dart';
 import 'package:videos_player/model/video.model.dart';
 import 'package:videos_player/style/style1.style.dart';
+import 'package:videos_player/style/style2.style.dart';
 import 'package:videos_player/util/constant/constants.dart';
 import 'package:videos_player/util/theme.util.dart';
 
@@ -143,22 +144,39 @@ class _VideosPlayerState extends State<VideosPlayer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: _maxHeight,
-      child: (_chewieController == null)
-          ? Center(child: CupertinoActivityIndicator())
-          : Stack(children: <Widget>[
-              Chewie(
-                controller: _chewieController,
-              ),
-              (widget.playlistStyle == Style.Style1)
-                  ? new Style1(
-                      maxHeight: _maxHeight,
-                      networkVideos: widget.networkVideos,
-                      selectedVideo: selectedVideo,
-                      onVideoChange: playNetworkVideos,
-                    )
-                  : Container(),
-            ]),
+      child: Column(
+        children: <Widget>[
+          (_chewieController == null)
+              ? Container(
+                  height: _maxHeight,
+                  color: Colors.white,
+                  child: Center(child: CupertinoActivityIndicator()))
+              : Container(
+                  height: _maxHeight,
+                  color: Colors.white,
+                  child: Stack(children: <Widget>[
+                    Chewie(
+                      controller: _chewieController,
+                    ),
+                    (widget.playlistStyle == Style.Style1)
+                        ? new Style1(
+                            maxHeight: _maxHeight,
+                            networkVideos: widget.networkVideos,
+                            selectedVideo: selectedVideo,
+                            onVideoChange: playNetworkVideos,
+                          )
+                        : Container(),
+                  ]),
+                ),
+          (widget.playlistStyle == Style.Style2 && _chewieController != null)
+              ? Style2(
+                  maxHeight: _maxHeight,
+                  networkVideos: widget.networkVideos,
+                  selectedVideo: selectedVideo,
+                  onVideoChange: playNetworkVideos)
+              : Container(),
+        ],
+      ),
     );
   }
 }
