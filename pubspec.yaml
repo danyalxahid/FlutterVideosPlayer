@@ -10,8 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  video_player: ^0.10.8+1
-  chewie: ^0.9.8+1
+  video_player: ^2.0.0
+  chewie: ^1.0.0
 
 dev_dependencies:
   flutter_test:
